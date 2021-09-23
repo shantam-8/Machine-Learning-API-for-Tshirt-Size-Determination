@@ -10,3 +10,6 @@
 | **Short Length** |60.0 |63.0 |66.0 |69.0 |72.0 |
 | **Regular Length** | 63.0 |66.0 |69.0 |72.0 |75.0 |
 | **Long Length** | 66.0 |69.0 |72.0 |75.0 |78.0 |
+To further ease this process, the following Neural Network powered API takes the user’s height, weight, shoe size, and preferred t-shirt fit (Standard or Relaxed) and provides the perfect t-shirt with its respective confidence percentage.
+
+Please note that this API is currently in its development stage and can only consider men’s sizes. Future developments include reformatting the front end of the API and improving the model to provide more accurate t-shirt sizes.
