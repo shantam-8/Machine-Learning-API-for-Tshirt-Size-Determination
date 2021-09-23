@@ -52,7 +52,7 @@ def take_inp():
         <form method="post">
         <input maxlength="5" name="height" type="number" step="0.1" placeholder="Height in cm" />
         <input maxlength="5" name="weight" type="number" step="0.1" placeholder="Weight in kg" />
-        <input maxlength="5" name="shoesize" type="number" step="0.1" placeholder="Shoe Size" />
+        <input maxlength="5" name="shoesize" type="number" step="0.1" placeholder="EU Shoe Size" />
         <input maxlength="28" name="fit" type="number" placeholder="Standard or Relaxed Fit" />
         <input type="submit" />'''
 
