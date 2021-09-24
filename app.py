@@ -3,7 +3,6 @@ import numpy as np
 from fastapi import FastAPI, Form
 from starlette.responses import HTMLResponse
 from keras.models import load_model
-import re
 
 app = FastAPI()
 
