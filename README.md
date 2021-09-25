@@ -18,5 +18,27 @@ Please note that this API is currently in its development stage and can only con
 ## Visuals
 The following visual illustrates the working of the API.
 
-![Working of API](https://user-images.githubusercontent.com/64306405/134772484-bbdafefe-5fa9-4fdb-8986-6835ce74e2fb.gif)
+![Working of API](https://user-images.githubusercontent.com/64306405/134773551-00e4576b-a5b5-4d32-acd6-b4285bb77b5c.gif)
 
+## Technology
+### Model Construction
+The model [(Model_4.h5)](https://github.com/shantam-8/Machine-Learning-API-for-Tshirt-Size-Determination/blob/main/Model_4.h5) is a Neural Network constructed using the TensorFlow Library. After several evaluations it was adjudged that the “swish” activation increased the accuracy of the model when compared with standard activations like “ReLU”. The ["swish" activation](https://www.geeksforgeeks.org/ml-swish-function-by-google-in-keras/) was used in the following manner.
+
+```python
+from keras.backend import sigmoid
+from keras.utils.generic_utils import get_custom_objects
+from keras.layers import Activation
+
+def swish(x, beta = 1):
+    return (x * sigmoid(beta * x))
+
+get_custom_objects().update({'swish': swish})
+
+#Replacing "ReLU" with "swish" in the activation parameter of Sequential. 
+import tensorflow as tf
+
+model = tf.keras.models.Sequential([
+                                    tf.keras.layers.Dense(6000, activation="swish"),
+                                    ])
+```
+Additionally, of the 500 data points sourced from different websites, 70% were used as the training set and 30% were used as the test set. Through several processes of trial-and-error, a Training Accuracy of 0.9521 and a Test Accuracy of 0.8541 was achieved.
