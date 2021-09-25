@@ -14,3 +14,9 @@
 To further ease this process, the following Neural Network powered API takes the user’s height, weight, shoe size, and preferred t-shirt fit (Standard or Relaxed) and provides the perfect t-shirt with its respective confidence percentage.
 
 Please note that this API is currently in its development stage and can only consider men’s sizes. Future developments include reformatting the front end of the API and improving the model to provide more accurate t-shirt sizes.
+
+## Visuals
+The following visual illustrates the working of the API.
+
+![Working of API](https://user-images.githubusercontent.com/64306405/134772484-bbdafefe-5fa9-4fdb-8986-6835ce74e2fb.gif)
+
