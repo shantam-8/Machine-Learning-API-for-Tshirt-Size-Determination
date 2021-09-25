@@ -20,8 +20,7 @@ The following visual illustrates the working of the API.
 
 ![Working of API](https://user-images.githubusercontent.com/64306405/134773551-00e4576b-a5b5-4d32-acd6-b4285bb77b5c.gif)
 
-## Technology
-### Model Construction
+## Model Construction
 The model [(Model_4.h5)](https://github.com/shantam-8/Machine-Learning-API-for-Tshirt-Size-Determination/blob/main/Model_4.h5) is a Neural Network constructed using the TensorFlow Library. After several evaluations it was adjudged that the “swish” activation increased the accuracy of the model when compared with standard activations like “ReLU”. The ["swish" activation](https://www.geeksforgeeks.org/ml-swish-function-by-google-in-keras/) was used in the following manner.
 
 ```python
