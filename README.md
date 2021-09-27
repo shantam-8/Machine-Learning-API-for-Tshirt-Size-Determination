@@ -64,3 +64,17 @@ model = tf.keras.models.Sequential([
 ```
 Additionally, of the 500 data points sourced from different websites, 70% were used as the training set and 30% were used as the test set. Through several processes of trial-and-error, a Training Accuracy of 0.9521 and a Test Accuracy of 0.8541 was achieved.
 
+## Potential Updates
+The list indicates the updates that can be made to this API.
+- Fixing the Heroku deployment.
+- Increasing the accuracy of the model.
+- Improving the front-end of the API.
+- Updating the front-end and back-end of the API to allow values for female t-shirts.
+
+## References
+- "ML - Swish Function by Google in Keras.” GeeksforGeeks, 26 May 2020, https://www.geeksforgeeks.org/ml-swish-function-by-google-in-keras/.
+- “How to Deploy Machine Learning/Deep Learning Models to the Web.” KDnuggets, https://www.kdnuggets.com/2021/04/deploy-machine-learning-models-to-web.html.
+- “Delply Machine Learning Model Using Heroku and FASTAPI.” Analytics Vidhya, 6 July 2021, https://www.analyticsvidhya.com/blog/2021/06/deploying-ml-models-as-api-using-fastapi-and-heroku/.
+
+## License
+This repository has a [MIT License](https://github.com/shantam-8/Machine-Learning-API-for-Tshirt-Size-Determination/blob/main/LICENSE).
