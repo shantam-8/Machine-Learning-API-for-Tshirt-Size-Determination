@@ -3,6 +3,7 @@ import numpy as np
 from fastapi import FastAPI, Form
 from starlette.responses import HTMLResponse
 from keras.models import load_model
+import tensorflow as tf
 
 app = FastAPI()
 
@@ -58,14 +59,22 @@ def take_inp():
 
 @app.post('/predict')
 def predict(height:float = Form(...), weight:float = Form(...), shoesize:float = Form(...), fit:float = Form(...)):
-    model = load_model('Model_4.h5')
-    val = np.array([np.array([height, weight, shoesize, fit])])
-    
-    test1 = model.predict(val)
-    ans = np.argmax(test1)
+    model = tf.lite.Interpreter(model_path="Model_4.tflite")
+    model.allocate_tensors()
 
+    input_details = model.get_input_details()
+    output_details = model.get_output_details()
+
+    val = np.array([np.array([height, weight, shoesize, fit])], dtype=np.float32)
+    model.set_tensor(input_details[0]['index'], val)
+    
+    model.invoke()
+
+    output_data = model.get_tensor(output_details[0]['index'])
+
+    ans = np.argmax(output_data)
     size = val_size_conversion(ans)
-    confidence = np.max(test1) * 100
+    confidence = np.max(output_data) * 100
 
     return{f"Your perfect tshirt size is {size}. This can be said with a confidence of {confidence:.2f}%"}
 
