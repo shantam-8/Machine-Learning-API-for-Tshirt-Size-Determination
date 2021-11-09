@@ -65,7 +65,7 @@ model = tf.keras.models.Sequential([
 Additionally, of the 500 data points sourced from different websites, 70% were used as the training set and 30% were used as the test set. Through several processes of trial-and-error, a Training Accuracy of 0.9521 and a Test Accuracy of 0.8541 was achieved.
 
 ## Model Deployment
-As the original model was too large, the model has been compressed into a model named "Model_4.tflite" and suitable changes have been made to "app.py". This was then depolyed via heroku. The following site opens the API:  
+As the original model was too large, the model has been compressed into a model named "Model_4.tflite" and suitable changes have been made to "app.py". This is seen in the "deploy" branch of the repository. This branch has been deployed via heroku. The following site opens the API: [https://tshirt-sizing.herokuapp.com/predict](https://tshirt-sizing.herokuapp.com/predict).  
 
 ## Potential Updates
 The list indicates the updates that can be made to this API.
