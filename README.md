@@ -69,7 +69,7 @@ As the original model was too large, the model has been compressed into a model 
 
 ## Potential Updates
 The list indicates the updates that can be made to this API.
-- Fixing the Heroku deployment.
+- ~~Fixing the Heroku deployment.~~
 - Increasing the accuracy of the model.
 - Improving the front-end of the API.
 - Updating the front-end and back-end of the API to allow values for female t-shirts.
