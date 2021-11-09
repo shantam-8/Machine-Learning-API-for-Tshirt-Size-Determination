@@ -1,4 +1,4 @@
-# Machine Learning API for Tshirt Size Determination
+# Machine Learning API for Tshirt Size Determination [DEPLOYMENT VERSION]
 ## Introduction
 7.8 billion different people but just five conventional t-shirt sizes – XS, S, M, L, and XL. Hence, to provide a much better fit, we are creating three different t-shirt lengths (the Short, Regular, and Long) for each conventional t-shirt size – providing you with fifteen different options. The following table clearly explains the sizes provided.
 | Dimensions (in CM) | *XS* | *S* | *M* | *L* | *XL* |
@@ -63,6 +63,9 @@ model = tf.keras.models.Sequential([
                                     ])
 ```
 Additionally, of the 500 data points sourced from different websites, 70% were used as the training set and 30% were used as the test set. Through several processes of trial-and-error, a Training Accuracy of 0.9521 and a Test Accuracy of 0.8541 was achieved.
+
+## Model Deployment
+As the original model was too large, the model has been compressed into a model named "Model_4.tflite" and suitable changes have been made to "app.py". This was then depolyed via heroku. The following site opens the API:  
 
 ## Potential Updates
 The list indicates the updates that can be made to this API.
