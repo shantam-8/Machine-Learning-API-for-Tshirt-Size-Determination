@@ -45,7 +45,7 @@ def val_size_conversion(ans):
 
 
 #http://127.0.0.1:8000/predict
-@app.get('/predict', response_class=HTMLResponse)
+@app.get('/', response_class=HTMLResponse)
 def take_inp():
     return '''
         Please input the following values. In the Standard or Relaxed Fit input box, please insert "1" for a standard fit and "0" for a relaxed fit.
@@ -57,7 +57,7 @@ def take_inp():
         <input type="submit" />'''
 
 
-@app.post('/predict')
+@app.post('/')
 def predict(height:float = Form(...), weight:float = Form(...), shoesize:float = Form(...), fit:float = Form(...)):
     model = tf.lite.Interpreter(model_path="Model_4.tflite")
     model.allocate_tensors()
